@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Universal Downloader</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">UD</div>
+    <h2>Universal Downloader</h2>
+    <span class="status">● READY</span>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="tag">UNIVERSAL VIDEO TOOL</div>
+        <h1>Download Videos<br><span>Your Way.</span></h1>
+        <p>Paste a direct video link to preview your media.</p>
+
+        <div class="download-box">
+            <input id="videoUrl" type="url"
+                placeholder="Paste your direct video URL...">
+            <button id="checkBtn">Analyze Video</button>
+        </div>
+
+        <div id="message"></div>
+
+        <div id="previewBox" class="preview-box hidden">
+            <video id="videoPlayer" controls></video>
+
+            <h3>Video Settings</h3>
+
+            <div class="settings">
+                <div>
+                    <label>Video Quality</label>
+                    <select id="quality">
+                        <option value="source">Original Quality</option>
+                        <option value="360">360p</option>
+                        <option value="480">480p</option>
+                        <option value="720">720p</option>
+                        <option value="1080">1080p</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Format</label>
+                    <select id="format">
+                        <option value="original">Original</option>
+                        <option value="mp4">MP4</option>
+                        <option value="webm">WebM</option>
+                    </select>
+                </div>
+            </div>
+
+            <button id="downloadBtn" class="download-button">
+                Download Video ↓
+            </button>
+
+            <p id="downloadMessage" class="hint">
+                Original source quality is used for direct video links.
+                Other quality options are interface placeholders.
+            </p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>01 — Easy Access</h3>
+            <p>Simple video URL input.</p>
+        </div>
+        <div class="feature">
+            <h3>02 — Preview</h3>
+            <p>Preview supported video links.</p>
+        </div>
+        <div class="feature">
+            <h3>03 — Quality</h3>
+            <p>Quality selection interface.</p>
+        </div>
+    </section>
+
+    <footer>
+        Only download videos you own or have permission to use.
+    </footer>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
